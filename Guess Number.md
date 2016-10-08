@@ -84,7 +84,7 @@ int main() {
 if 语句用法如下（condition是条件，statements是多条语句，statement为单条语句）
 ```c
 if(condition) {
-  statments
+  statements
 }else if (condition){
   statements
 }else {
@@ -99,9 +99,9 @@ if(condition) {
  + else 语句必须放最后
 为了简便说明，今后{statments}我都用 block（语句块）代替，如果可以用单条语句替换我便写 statement||block
 所以if语句的格式便为
-1. 必选 if(condition) block
-2. 没有或一条或多条 else if(condition) block
-3. 没有或一条 else block
+1. 必选 if(condition) statement||block
+2. 没有或一条或多条 else if(condition) statement||block
+3. 没有或一条 else statement||block
 
 所以我们的代码又可以扩展一些了：
 ```c
@@ -192,39 +192,7 @@ int main() {
 还是有玩家猜不出来，于是我决定让玩家猜5次：
 再多复制两次？
 真傻！还有循环呢！
-先介绍一下for循环格式如下
-```c
-  for(变量声明;条件;变量增加) {
-    statements
-  }
-```
-嗯 这样估计大家不懂怎么用，我举个栗子：
-```c
-#include<stdio.h>
 
-#define random_number 666
-
-int main() {
-  int guess;
-  for(int i = 0;i < 5;i++) {
-    printf("Please input your guess:");
-    scanf("%d",&guess);  
-    if(guess == random_number) //判断是否相等
-      printf("You win\n"); //相等玩家就赢了
-    else {
-      if(guess > random_number)
-        printf("Too high\n"); //太高
-      else
-        printf("Too low\n"); //太低
-    }
-  }
-  return 0;
-}
-```
-解释一下：
-1. `int i = 0;`定义一个变量i,并赋值为0
-2. `i < 5;` 当i < 5则继续循环
-3. `i++` i自增1
 
 这个程序还有些bug，但只有学习完了控制语句才能解决。
 ***未完待续***
