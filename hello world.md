@@ -15,7 +15,7 @@ hello world!
 ```
 
 我们一行一行地解释它。
-1. 首先`#include <stdio.h>` 表示引用了 stdio.h 这个库，stdio 是 standard input and output 即标准输入输出的意思，只有引用了这个库才能使用`printf`函数。[^1]
+1. 首先`#include <stdio.h>` 表示引用了 stdio.h 这个库，stdio 是 standard input and output 即标准输入输出的意思，只有引用了这个库才能使用`printf`函数。<sup>注1</sup>
 
 2. 第二行 `int main() {`开始了一个叫main的函数也就是「主」函数结束于最后的`}`中间都是函数体。C语言约定每个程序都要有一个main函数作为程序开头，也就是说一个程序从这里开始。现在只要知道每个程序都必须这么打一个main函数出来就好了。
 
@@ -66,4 +66,4 @@ The lenth is 13
 
   我们做个小实验，我们把这行改成`printf("%d\n",1024);`再运行看看，输出的结果就变成了`The lenth is 1024`。这也就表明了%d替换的就是之后那个参数的值，无论他是变量还是普通数字。
 
-[^1]:由于`printf`函数极为常用，有的编译器在没有引用stdio.h的情况下会自动添加这个引用。
+注1:由于`printf`函数极为常用，有的编译器在没有引用stdio.h的情况下会自动添加这个引用。
